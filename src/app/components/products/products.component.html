@@ -1,0 +1,46 @@
+<div class="cart-top container-fluid">
+    <div class="container d-flex">
+        <div class="items">
+<a>
+    <img style="width: 150%; height:60%; margin-top:21px;" src="https://rukminim1.flixcart.com/flap/128/128/image/f15c02bfeb02d15d.png?q=100">
+    <h6>Products</h6> 
+</a>
+        </div>
+        <div class="items">
+            <a>
+                <img style="width: 25%; height:60%; margin-top:21px;" src="https://www.techprevue.com/wp-content/uploads/2017/06/electronic-devices-1.jpg" hspace="50">
+                <h6>Electronics</h6>
+            </a>
+        </div>
+        <div class="items">
+            <a>
+                <img style="width: 70%; height:60%; margin-top:21px;" src="https://tse3.mm.bing.net/th/id/OIP.MQ3A_ObdpqBviyisOLSrxQHaLG?pid=ImgDet&rs=1" hspace="10">
+                <h6>Fashion</h6>
+            </a>
+        </div>
+        <div class="items">
+            <a>
+                <img style="width: 30%; height:60%; margin-top:21px;" src="https://2.bp.blogspot.com/-Avz08GINVSY/UCu9W226RRI/AAAAAAAACiA/qnUhz1aeD8M/s1600/necklace-zoom-DSC_9776.jpg">
+                <h6>Jewellery</h6>
+            </a>
+        </div>
+    </div>
+</div>
+<div class="container">
+    <div class="row">
+        <ng-container *ngFor="let item of productList">
+
+
+        <div class="card col-md-3">
+            <img src="{{item.image}}" alt="">
+            <h5 class="itemdata">{{item.title}}</h5>
+            <p class="itemdata">{{item.description}}</p>
+           <p><strong>Price:</strong>${{item.price}}</p>
+            <p>{{item.category}}</p>
+            <p>{{item.description}}</p>
+            <button class="btn btn-primary" (click)="addtoCart(item)">Add to cart</button>
+        </div>
+    </ng-container>
+    </div>
+
+</div>
